@@ -7,7 +7,7 @@ import { getLocale } from '@/lib/i18n-server';
 import { LanguageSwitcher } from '@/components/language-switcher';
 
 export const metadata: Metadata = {
-  title: 'Raven Test',
+  title: 'MIA',
   description: "Raven progressiv matritsalari asosidagi mantiqiy fikrlash testi",
 };
 

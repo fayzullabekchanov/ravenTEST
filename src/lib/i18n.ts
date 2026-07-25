@@ -22,7 +22,7 @@ export function isLocale(value: string | undefined | null): value is Locale {
 const dictionaries = {
   uz: {
     nav: {
-      brand: 'Raven Test',
+      brand: 'MIA',
       test: 'Test',
       results: 'Natijalarim',
       admin: 'Admin',
@@ -110,7 +110,7 @@ const dictionaries = {
   },
   ru: {
     nav: {
-      brand: 'Raven Test',
+      brand: 'MIA',
       test: 'Тест',
       results: 'Мои результаты',
       admin: 'Админ',
@@ -198,7 +198,7 @@ const dictionaries = {
   },
   en: {
     nav: {
-      brand: 'Raven Test',
+      brand: 'MIA',
       test: 'Test',
       results: 'My Results',
       admin: 'Admin',

@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         Role     @default(USER)
+  createdAt    DateTime @default(now())
+  results      Result[]
+}
+
+model Question {
+  id           Int      @id @default(autoincrement())
+  position     Int      @unique
+  image        String
+  options      String[]
+  correctIndex Int
+}
+
+model Result {
+  id        String   @id @default(cuid())
+  userId    String
+  score     Int
+  total     Int
+  answers   Json
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId, createdAt])
+}
